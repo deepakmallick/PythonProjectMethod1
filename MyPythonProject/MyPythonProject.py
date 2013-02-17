@@ -1,7 +1,3 @@
-'''Create an html file with  user input (a name) embedded,
-and call the default web browser to display the file.'''
-
-# NEW more appropriate name, now that it is a format string
 pageTemplate = '''
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
@@ -35,7 +31,7 @@ Year Of Passing: {year}
 </body>
 </html>''' 
 
-def main():    # NEW
+def main():    
     portfolio_headline = input("Enter your Carrier Objective: ")
     first_name = input("Enter your first name: ")
     last_name = input("Enter your last name: ")
@@ -65,6 +61,6 @@ def browseLocal(webpageText, filename='tempBrowseLocal.html'):
     with given filename.'''
     import webbrowser, os.path
     strToFile(webpageText, filename)
-    webbrowser.open("file:///" + os.path.abspath(filename)) #elaborated for Mac
+    webbrowser.open("file:///" + os.path.abspath(filename)) 
 
 main()
